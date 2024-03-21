@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('entre574', function (Blueprint $table) {
+        Schema::create('edu675', function (Blueprint $table) {
             $table->id();
-            $table->string("libelle");
-            $table->string("adresse")->default("Abidjan");
-            $table->string("image")->nullable();
-
+            $table->string("diplome");
+            $table->string("annee")->nullable();
+            $table->string("etablissement")->nullable();
+            $table->integer("idcandidat")->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('entreprises');
+        Schema::dropIfExists('education');
     }
 };

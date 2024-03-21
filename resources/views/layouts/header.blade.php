@@ -22,20 +22,20 @@
                                 </li>
                         </li>
                         <li class="nav-item">
-                            <a href="emplois" class="nav-link">Nos offres d'emplois</a>
+                            <a href="/emplois" class="nav-link">Nos offres d'emplois</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about" class="nav-link">A propos</a>
+                            <a href="/about" class="nav-link">A propos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="contact" class="nav-link">Nous contacter</a>
+                            <a href="/contact" class="nav-link">Nous contacter</a>
                         </li>
                     </ul>
 
                     <div class="other-option">
 
-                        <a href="login" class="signin-btn">Se connecter</a>
+                        <a href="/login" class="signin-btn">Se connecter</a>
                     </div>
                 </div>
             </nav>

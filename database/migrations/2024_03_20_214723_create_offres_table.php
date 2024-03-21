@@ -11,14 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('offres', function (Blueprint $table) {
+        Schema::create('off78', function (Blueprint $table) {
             $table->id();
             $table->string("libelle");
-            $table->string("salaire");
-            $table->string("adresse");
-            $table->integer("idsecteur");
-            $table->string("type");
-
+            $table->text("description");
+            $table->string("salaire")->nullable();
+            $table->string("adresse")->nullable()->default("Abidjan");
+            $table->integer("idsecteur")->nullable();
+            $table->integer("identreprise")->nullable();
+            $table->string("type")->default("cdd");
+            $table->datetime("date_cloture")->default(now())->nullable();
+            $table->string("image")->nullable();
+            $table->string("status")->default("publier");
             $table->timestamps();
         });
     }

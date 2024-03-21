@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('entre574', function (Blueprint $table) {
+        Schema::create('exp453', function (Blueprint $table) {
             $table->id();
             $table->string("libelle");
-            $table->string("adresse")->default("Abidjan");
-            $table->string("image")->nullable();
-
+            $table->string("duree")->nullable();
+            $table->string("entreprise")->nullable();
+            $table->string("contrat")->default("CDD");
+            $table->integer("idcandidat")->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('entreprises');
+        Schema::dropIfExists('experiences');
     }
 };
