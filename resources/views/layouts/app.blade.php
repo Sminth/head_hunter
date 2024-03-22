@@ -141,7 +141,6 @@
 		<div class="top-btn">
 			<i class='bx bx-chevrons-up bx-fade-up'></i>
 		</div>
-
 <!-- jQuery first, then Bootstrap JS convertis pour Laravel -->
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>

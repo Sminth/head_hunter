@@ -12,6 +12,10 @@ class offre extends Model
     use HasFactory;
     protected $table="off78";
 
+    public function openCandidats($crud = false)
+    {
+        return '<a class="btn btn-sm btn-link" target="_blank" href="/emploi/'.$this->id.'/candidats" data-toggle="tooltip" title="Just a demo custom button."><i class="la la-eye"></i> Candidats ('.$this->nombre_candidats($this->id).')</a>';
+    }
 
     protected $fillable = ["libelle", 'salaire', 'image','description','adresse','idsecteur','identreprise','type','date_cloture'.'status'];
 
@@ -22,5 +26,9 @@ class offre extends Model
 
     function secteur(){
         return $this->belongsTo(secteur::class,'idsecteur',"id");
+     }
+
+     function nombre_candidats($id){
+        return  count(CandidatHasEmploi::where("idoffre",$id)->get());
      }
 }

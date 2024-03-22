@@ -41,6 +41,17 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2024-03-20 20:34:32',
                 'updated_at' => '2024-03-20 20:34:32',
             ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'lolipop Gbofloto',
+                'email' => 'virtus225one@gmail.com',
+                'email_verified_at' => NULL,
+                'password' => '$2y$12$Oh5DhtPA/jAP63RP9Lz4aeDLsrlRjUCk/gHayyrFD8eTnqdI9JzIe',
+                'remember_token' => NULL,
+                'created_at' => '2024-03-22 02:12:09',
+                'updated_at' => '2024-03-22 02:12:09',
+            ),
         ));
         
         

@@ -39,6 +39,8 @@ class OffreCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+
+        CRUD::addButtonFromModelFunction('line', 'voir candidats', 'openCandidats', 'beginning');
         $this->crud->addColumn([
             'name' => 'libelle',
             'label' => 'Intitulé',

@@ -41,11 +41,11 @@
             <div class="row">
                 @foreach ($secteurs as $secteur)
                     <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="job-list.html">
+                        <a href={{"/emplois/?idsecteur=".$secteur->id}} >
                             <div class="category-card">
                                 <i class='flaticon-computer'></i>
                                 <h3>{{ $secteur->libelle }}</h3>
-                                <p>3 postes ouverts</p>
+                                <p>{{count($secteur->offres)}} postes ouverts</p>
                             </div>
                         </a>
                     </div>
@@ -145,7 +145,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="company-card">
                             <div class="company-logo">
-                                <a href="job-grid.html">
+                                <a href={{"/emplois/?identreprise=".$entreprise->id}} >
                                     <img src={{ 'storage/' . $entreprise->image }} alt="company logo">
                                 </a>
                             </div>
@@ -155,8 +155,8 @@
                                     <i class='bx bx-location-plus'></i>
                                     {{ $entreprise->adresse }}
                                 </p>
-                                <a href="job-grid.html" class="company-btn">
-                                    25 Offres validées
+                                <a href={{"/emplois/?identreprise=".$entreprise->id}} class="company-btn">
+                                    {{count($entreprise->offres)}} Offres validées
                                 </a>
                             </div>
                         </div>

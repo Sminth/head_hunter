@@ -14,4 +14,9 @@ class secteur extends Model
     protected $table="sect45";
 
     protected $fillable = ["libelle", 'image'];
+
+
+    public function offres(){
+        return $this->HasMany(offre::class,'idsecteur');
+    }
 }

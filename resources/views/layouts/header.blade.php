@@ -34,8 +34,13 @@
                     </ul>
 
                     <div class="other-option">
+                            @if (session('user'))
+                            <a href="/user" class="signin-btn">{{session('user')->noms}}</a>
 
-                        <a href="/login" class="signin-btn">Se connecter</a>
+                            @else
+
+                            <a href="/login" class="signin-btn">Se connecter</a>
+                            @endif
                     </div>
                 </div>
             </nav>

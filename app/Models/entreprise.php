@@ -14,4 +14,8 @@ class entreprise extends Model
     protected $table="entre574";
 
     protected $fillable = ["libelle", 'adresse', 'image'];
+
+    public function offres(){
+        return $this->HasMany(offre::class,'identreprise');
+    }
 }

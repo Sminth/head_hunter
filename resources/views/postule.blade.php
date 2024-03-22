@@ -91,7 +91,7 @@
                         <div class="candidate-info-text candidate-education">
                                 <h3>Information personnel</h3>
 
-                            <div id="education-section">
+                            <div id="-section">
                                 <!-- Dynamic Education Fields -->
                                 <div class="row align-items-end mb-3">
                                     <div class="col-6">

@@ -11,6 +11,14 @@
                     l'emploi.</p>
                 </div>
 
+                @if (count($offres)==0)
+                <div class="row align-items-center">
+
+<center><h2>
+    Aucune Offre d'emploi trouvée
+</h2></center>
+                </div>
+                @else
                 <div class="row">
 
                     @foreach ($offres as $offre)
@@ -20,7 +28,7 @@
                                 <div class="col-md-1">
                                     <div class="cmpany-logo">
                                         {{-- <a href="job-details.html"></a> --}}
-                                        <img  src={{'storage/'.$offre->entreprise->image}}  alt="logo">
+                                        <img  src={{asset('storage/'.$offre->entreprise->image)}}  alt="logo">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -61,24 +69,9 @@
                     @endforeach
 
                 </div>
+                {{$offres->links()}}
+                @endif
 
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                                <i class='bx bx-chevrons-left bx-fade-left'></i>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link active"  href="#">1</a></li>
-                        <li class="page-item"><a class="page-link " href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                <i class='bx bx-chevrons-right bx-fade-right'></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </section>
         <!-- Job Section End -->
